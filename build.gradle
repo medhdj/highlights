@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath BuildPlugins.androidGradleDependency
+        classpath BuildPlugins.kotlinGradleDependency
+        classpath BuildPlugins.hiltGradleDependency
+    }
+}
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

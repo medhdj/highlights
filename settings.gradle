@@ -1,0 +1,4 @@
+rootProject.name = "highlights"
+include ':app'
+include ':core'
+include ':features'

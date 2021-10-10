@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/highlightsFragment">
+
+    <fragment
+        android:id="@+id/highlightsFragment"
+        android:name="com.medhdj.features.highlights.ui.HighlightsFragment"
+        tools:layout="@layout/fragment_highlights">
+
+        <action
+            android:id="@+id/action_go_to_details"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.medhdj.features.highlights.ui.DetailsFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_details" />
+</navigation>

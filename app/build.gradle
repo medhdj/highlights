@@ -1,0 +1,65 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "dagger.hilt.android.plugin"
+}
+
+android {
+    compileSdk AndroidSdk.compileSdk
+
+    defaultConfig {
+        applicationId AndroidApplication.appId
+        minSdk AndroidSdk.minSdk
+        targetSdk AndroidSdk.targetSdk
+
+        versionCode AndroidApplication.versionCode
+        versionName AndroidApplication.versionName
+
+        testInstrumentationRunner AndroidApplication.testRunner
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':features')
+
+    implementation Libraries.kotlinCoreKtx
+
+    implementation Libraries.hilt
+    kapt Libraries.hiltCompiler
+
+    implementation Libraries.appcompat
+    implementation Libraries.materialDesign
+
+    implementation Libraries.okHttpLogging
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitGsonConverter
+    implementation Libraries.retrofitRxJava
+
+    implementation Libraries.timber
+}
+
+kapt {
+    correctErrorTypes true
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.medhdj.core.features">
+
+    <application>
+        <activity
+            android:name="com.medhdj.features.highlights.ui.HighlightsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_highlights"
+            android:theme="@style/Theme.Highlights.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

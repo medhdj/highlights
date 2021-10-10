@@ -1,0 +1,50 @@
+plugins {
+    id ("com.android.library")
+    id ("kotlin-android")
+}
+
+android {
+    compileSdk AndroidSdk.compileSdk
+
+    defaultConfig {
+        minSdk AndroidSdk.minSdk
+        targetSdk AndroidSdk.targetSdk
+        versionCode AndroidApplication.versionCode
+        versionName AndroidApplication.versionName
+
+        testInstrumentationRunner AndroidApplication.testRunner
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation Libraries.kotlinCoreKtx
+
+    implementation Libraries.rxJava
+    implementation Libraries.rxAndroid
+    implementation Libraries.rxKotlin
+
+    implementation Libraries.liveDataKtx
+
+    testImplementation TestLibraries.junit
+}
