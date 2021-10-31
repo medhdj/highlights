@@ -53,7 +53,10 @@ dependencies {
     implementation Libraries.rxJava
     implementation Libraries.rxKotlin
 
-    implementation Libraries.timber
+    implementation Libraries.okHttp
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitRxJava
+    implementation Libraries.retrofitGsonConverter
 
     implementation Libraries.appcompat
     implementation Libraries.materialDesign
@@ -62,10 +65,11 @@ dependencies {
     implementation Libraries.navigationFragmentKtx
     implementation Libraries.navigationUiKtx
 
-    implementation Libraries.okHttp
-    implementation Libraries.retrofit
-    implementation Libraries.retrofitRxJava
-    implementation Libraries.retrofitGsonConverter
+    implementation Libraries.exoplayerCore
+    implementation Libraries.exoplayerDash
+    implementation Libraries.exoplayerUI
+
+    implementation Libraries.timber
 
     testImplementation TestLibraries.junit
     testImplementation TestLibraries.mockk

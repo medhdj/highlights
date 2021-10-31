@@ -50,7 +50,8 @@ class HighlightsFragment : Fragment() {
         binding.highlightsList.adapter = highlightsListAdapter
         highlightsListAdapter.itemClickListener = {
             val detailsBundle = bundleOf(
-                DetailsFragment.HIGHLIGHT_TITLE to it.title
+                HightlightDetailsViewModel.HIGHLIGHT_TITLE to it.title,
+                HightlightDetailsViewModel.HIGHLIGHT_VIDEO_URL to it.title
             )
             findNavController().navigate(R.id.action_go_to_details, detailsBundle)
         }
@@ -61,7 +62,7 @@ class HighlightsFragment : Fragment() {
         _binding = null
     }
 
-    private fun handleSuccess(data: List<HighlightsItemView>) {
+    private fun handleSuccess(data: List<HighlightsItemUIModel>) {
         highlightsListAdapter.submitList(data)
     }
 

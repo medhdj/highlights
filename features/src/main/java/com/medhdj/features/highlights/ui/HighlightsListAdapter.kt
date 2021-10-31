@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.medhdj.core.features.R
 import javax.inject.Inject
 
-typealias HighLightsItemClickListener = (HighlightsItemView) -> Unit
+typealias HighLightsItemClickListener = (HighlightsItemUIModel) -> Unit
 
 class HighlightsListAdapter @Inject constructor() :
-    ListAdapter<HighlightsItemView, HighlightsListAdapter.HighlightsItemViewHolder>(DIFF_LIST) {
+    ListAdapter<HighlightsItemUIModel, HighlightsListAdapter.HighlightsItemViewHolder>(DIFF_LIST) {
 
     var itemClickListener: HighLightsItemClickListener? = null
 
@@ -32,7 +32,7 @@ class HighlightsListAdapter @Inject constructor() :
         private val titleTextView: TextView = view.findViewById(R.id.title)
 
         fun bind(
-            highlight: HighlightsItemView,
+            highlight: HighlightsItemUIModel,
             itemClickListener: HighLightsItemClickListener?
         ) {
             titleTextView.text = highlight.title
@@ -47,16 +47,16 @@ class HighlightsListAdapter @Inject constructor() :
 
     companion object {
         private val DIFF_LIST =
-            object : DiffUtil.ItemCallback<HighlightsItemView>() {
+            object : DiffUtil.ItemCallback<HighlightsItemUIModel>() {
                 override fun areContentsTheSame(
-                    item1: HighlightsItemView,
-                    item2: HighlightsItemView
+                    item1: HighlightsItemUIModel,
+                    item2: HighlightsItemUIModel
                 ): Boolean =
                     item1.title == item2.title && item1.title == item2.title
 
                 override fun areItemsTheSame(
-                    item1: HighlightsItemView,
-                    item2: HighlightsItemView
+                    item1: HighlightsItemUIModel,
+                    item2: HighlightsItemUIModel
                 ): Boolean =
                     item1 == item2
             }

@@ -45,6 +45,7 @@ dependencies {
     implementation Libraries.rxKotlin
 
     implementation Libraries.liveDataKtx
+    implementation Libraries.lifeCycleCommon
 
     testImplementation TestLibraries.junit
 }

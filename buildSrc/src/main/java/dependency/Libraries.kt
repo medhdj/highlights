@@ -29,20 +29,26 @@ object AndroidApplication {
 object Libraries {
     private object Versions {
         const val kotlinKtx = "1.6.0"
-        const val appCompat = "1.3.1"
-        const val materialDesign = "1.4.0"
-        const val constraintLayout = "2.1.1"
-        const val navigation = "2.3.5"
+
         const val rxJava = "2.2.2"
         const val rxJavaAndroid = "2.1.0"
         const val rxKotlinVersion = "2.0.0"
-        const val lifeCycle = "2.3.1"
-        const val fragmentKtx = "1.3.6"
-        const val timber = "4.7.1"
+
         const val hilt = BuildPlugins.Versions.hilt
 
         const val retrofit = "2.9.0"
         const val okhttp = "4.7.2"
+
+        const val appCompat = "1.3.1"
+        const val materialDesign = "1.4.0"
+        const val constraintLayout = "2.1.1"
+        const val navigation = "2.3.5"
+        const val lifeCycle = "2.3.1"
+        const val fragmentKtx = "1.3.6"
+
+        const val exoplayer = "2.15.1"
+
+        const val timber = "4.7.1"
     }
 
 
@@ -61,7 +67,8 @@ object Libraries {
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
-    const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationFragmentKtx =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // Network
@@ -78,7 +85,15 @@ object Libraries {
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
     const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifeCycle}"
+    const val lifeCycleCommon = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifeCycle}"
     const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
+
+    // Player
+    const val exoplayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoplayer}"
+    const val exoplayerUI = "com.google.android.exoplayer:exoplayer-ui:${Versions.exoplayer}"
+    const val exoplayerDash = "com.google.android.exoplayer:exoplayer-dash:${Versions.exoplayer}"
+
+
 
     // utils
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"

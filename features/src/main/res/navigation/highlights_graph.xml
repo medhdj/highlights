@@ -12,11 +12,17 @@
 
         <action
             android:id="@+id/action_go_to_details"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.medhdj.features.highlights.ui.DetailsFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_details" />
+        android:id="@+id/detailsFragment"
+        android:name="com.medhdj.features.highlights.ui.HighlightDetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="videoUrl"
+            app:argType="string" />
+    </fragment>
 </navigation>

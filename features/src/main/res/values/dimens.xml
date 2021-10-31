@@ -5,4 +5,14 @@
     <dimen name="box_padding_s">5dp</dimen>
 
     <dimen name="text_size_m">20sp</dimen>
+    <dimen name="text_size_l">25sp</dimen>
+
+    <dimen name="box_size_l">30</dimen>
+    <dimen name="box_size_xl">50</dimen>
+    <dimen name="box_size_xxl">70</dimen>
+
+
+    <dimen name="player_height">300dp</dimen>
+
+
 </resources>

@@ -16,8 +16,8 @@ class HighlightsViewModel @Inject constructor(
     private val getHighlightsUseCase: GetHighlightsUseCase
 ) : ViewModel() {
 
-    private val _highlightsData = MutableLiveData<Response<Throwable, List<HighlightsItemView>>>()
-    val highlightsData: LiveData<Response<Throwable, List<HighlightsItemView>>> = _highlightsData
+    private val _highlightsData = MutableLiveData<Response<Throwable, List<HighlightsItemUIModel>>>()
+    val highlightsData: LiveData<Response<Throwable, List<HighlightsItemUIModel>>> = _highlightsData
 
     init {
         fetchHighlights()
@@ -40,5 +40,5 @@ class HighlightsViewModel @Inject constructor(
 
 private fun List<Highlight>.toHighlightsItemViewList() =
     map {
-        HighlightsItemView(it.title)
+        HighlightsItemUIModel(it.title)
     }
