@@ -8,4 +8,5 @@ Sample project, exploring the app **Modularization** in combination with some co
 - Kotlin
 - Gradle BuildSrc
 - RxJava
+- Exoplayer
 - .... see [BuildSrc](https://github.com/medhdj/highlights/blob/master/buildSrc/src/main/java/dependency/Libraries.kt) for more :)
